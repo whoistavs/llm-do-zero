@@ -1,9 +1,9 @@
-# LLM do zero: do mini-GPT ao Tavinho
+# LLM do zero: do mini-GPT à Jaci
 
 Projeto pessoal para entender, na prática, como funciona uma LLM (como o ChatGPT), em duas partes:
 
 1. **Mini-GPT do zero.** Construí um modelo de linguagem passo a passo em Python e PyTorch: de um modelo bigrama até um Transformer com atenção, treinado com os romances de Machado de Assis e depois ajustado para conversar.
-2. **Tavinho.** Um assistente pessoal que roda 100% local, montado em cima de um modelo aberto (Qwen 3.5 9B via Ollama), com personalidade, memória, ferramentas, busca nos meus arquivos (RAG) e leitura de imagens (OCR).
+2. **Jaci.** Uma assistente pessoal que roda 100% local, montado em cima de um modelo aberto (Qwen 3.5 9B via Ollama), com personalidade, memória, ferramentas, busca nos meus arquivos (RAG) e leitura de imagens (OCR).
 
 Tudo roda num notebook comum (16 GB de RAM, sem GPU dedicada).
 
@@ -41,9 +41,9 @@ O passo 4 treina em cerca de 5 minutos na CPU e salva `mini_gpt.pt`, que os pass
 
 ---
 
-## Parte 2: Tavinho, assistente pessoal local
+## Parte 2: Jaci, assistente pessoal local
 
-Arquivos: `Modelfile` (personalidade) e `tavinho.py` (programa).
+Arquivos: `Modelfile` (personalidade), `jaci.py` (programa), `jaci_app.py` (interface no navegador) e `avaliar.py` (testes automáticos).
 
 ### Funcionalidades
 
@@ -72,14 +72,14 @@ ollama pull qwen3.5:9b
 ollama pull embeddinggemma
 
 # 2. Criar o modelo com a personalidade
-ollama create tavinho -f Modelfile
+ollama create jaci -f Modelfile
 
 # 3. Instalar as dependências e rodar
 pip install -r requirements.txt
-python tavinho.py
+python jaci.py
 ```
 
-Comandos dentro do Tavinho: `/lembrar`, `/memoria`, `/esquecer`, `/novo`, `/indexar`, `/ajuda`, `/sair`.
+Comandos dentro da Jaci: `/lembrar`, `/memoria`, `/esquecer`, `/novo`, `/indexar`, `/ajuda`, `/sair`.
 
 Memória, histórico, índice e documentos ficam só no computador (estão no `.gitignore`).
 

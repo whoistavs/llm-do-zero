@@ -6,3 +6,8 @@ historico.json
 indice.json
 documentos/
 __pycache__/
+cache_wiki/
+erros_reportados.json
+relatorio_avaliacao.*
+Claude outputs/
+area_python/
