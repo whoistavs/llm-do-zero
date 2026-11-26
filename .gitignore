@@ -1,0 +1,8 @@
+*.pt
+pt-extract.jsonl.gz
+dicionario.tsv
+memoria.json
+historico.json
+indice.json
+documentos/
+__pycache__/

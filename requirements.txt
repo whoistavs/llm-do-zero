@@ -1,0 +1,6 @@
+torch
+nltk
+ollama
+pypdf
+python-pptx
+python-docx
